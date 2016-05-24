@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self
         DataService.instance.loadMovies()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "onMoviesLoaded:", name: "moviesLoaded", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.onMoviesLoaded(_:)), name: "moviesLoaded", object: nil)
     }
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -31,6 +31,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var movie: Movie!
+        movie = DataService.instance.loadedMovies[indexPath.row]
+        performSegueWithIdentifier("MovieDetailVC", sender: movie)
+        
+        
         
     }
     
@@ -55,8 +60,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func onMoviesLoaded(notif: AnyObject) {
         tableView.reloadData()
     }
+     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "WebViewVC") {
+            let pointInTable = sender!.convertPoint(sender!.bounds.origin, toView: self.tableView)
+            let indexPath = self.tableView.indexPathForRowAtPoint(pointInTable)
+            let webViewVC = segue.destinationViewController as! WebViewVC
+            let movie = DataService.instance.loadedMovies[indexPath!.row]
+            print(movie.imdbUrl.debugDescription)
+                
+            webViewVC.urlStr = movie.imdbUrl
+         
+            
+        }
+        
+    }
     
-
-
 }
 

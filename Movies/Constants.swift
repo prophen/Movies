@@ -25,4 +25,5 @@ let IMG_BASE = "http://image.tmdb.org/t/p/"
 let IMG_WIDTH_92 = "w92"
 let IMG_WIDTH_154 = "w154"
 
+
 typealias DownloadComplete = () -> ()

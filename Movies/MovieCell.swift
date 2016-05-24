@@ -13,7 +13,8 @@ class MovieCell: UITableViewCell {
     @IBOutlet weak var thumbImg: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var descLbl: UILabel!
-    @IBOutlet weak var imdbLbl: UILabel!
+    @IBOutlet weak var imdbBtn: UIButton!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,11 +22,12 @@ class MovieCell: UITableViewCell {
     }
 
     func configureCell(movie: Movie) {
-        titleLbl.text = movie.title
+        titleLbl.text = movie.title.capitalizedString
         descLbl.text = movie.desc
-        imdbLbl.text = movie.imdbUrl
+        let imdbUrl: String = movie.imdbUrl
+        imdbBtn.setTitle(imdbUrl, forState:.Normal )
         thumbImg.image = DataService.instance.imageForPath(movie.detailImgPath)
     }
-
-
+    
+   
 }

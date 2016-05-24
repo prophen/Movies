@@ -66,7 +66,7 @@ class Movie: NSObject, NSCoding {
     var imdbUrl: String {
         get {
             if _imdbUrl == nil {
-                _imdbUrl = ""
+                _imdbUrl = "http://www.IMDb.com"
             }
             return _imdbUrl
         }
@@ -122,7 +122,6 @@ class Movie: NSObject, NSCoding {
                 if let imdbId = dict["imdbID"] as? String {
                     self._imdbUrl  = "\(IMDB_BASE)\(imdbId)"
                 }
-               // print(result.debugDescription)
             }
         }
     
@@ -140,33 +139,32 @@ class Movie: NSObject, NSCoding {
                             let imageUrl = "\(IMG_BASE)\(IMG_WIDTH_154)\(poster_path)"
                             
                             var img: UIImage!
+                            
                             let url = NSURL(string: imageUrl)!
                             if let data = NSData(contentsOfURL: url) {
                                 img = UIImage(data: data)
                                 let detailImgPath = DataService.instance.saveImageAndCreatePath(img)
                                 self._detailImgPath = detailImgPath
-                                print(movie.detailImgPath)
-                                print(movie.plot)
-                            } else {
-                                img = UIImage(named: "default-image")
-                                let detailImgPath = DataService.instance.saveImageAndCreatePath(img)
-                                self._detailImgPath = detailImgPath
                             }
                         }
                     
+                    } else {
+                        let img = UIImage(named: "default-image")
+                        
+                        let detailImgPath = DataService.instance.saveImageAndCreatePath(img!)
+                        self._detailImgPath = detailImgPath
                     }
+
                 }
             }
-       
-    
-            
-
-            DataService.instance.addMovie(self)
             completed()
- 
-            
+            DataService.instance.addMovie(self)
+           
         }
-
+  
+    }
+    
+    func getMoviePoster(){
         
     }
 }
