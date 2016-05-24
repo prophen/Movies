@@ -23,6 +23,7 @@ class MovieCell: UITableViewCell {
     func configureCell(movie: Movie) {
         titleLbl.text = movie.title
         descLbl.text = movie.desc
+        imdbLbl.text = movie.imdbUrl
         thumbImg.image = DataService.instance.imageForPath(movie.detailImgPath)
     }
 

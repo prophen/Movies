@@ -14,7 +14,7 @@ class AddMovieVC: UIViewController {
     @IBOutlet weak var descField: UITextField!
     @IBOutlet weak var posterImg: RoundedImages!
     
-    
+    var movie = Movie()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,19 +22,28 @@ class AddMovieVC: UIViewController {
     }
 
     @IBAction func previewPosterBtnPressed(sender: AnyObject) {
+        
 
     }
     
     @IBAction func addBtnPressed(sender: AnyObject) {
-        if let title = titleField.text, let desc = descField.text, let img = posterImg.image {
+        if titleField.text != "" {
+            movie.title = titleField.text!
             
-            let imgPath = DataService.instance.saveImageAndCreatePath(img)
+            if descField.text != "" {
+                movie.desc = descField.text!
+            }
             
-            let movie = Movie(title: title, desc: desc, detailImgPath: imgPath)
-            DataService.instance.addMovie(movie)
+             movie.downloadMovieDetails ({ () -> () in
+                
+                }, movie: movie)
+            
+            
             dismissViewControllerAnimated(true, completion: nil)
-           
         }
+       
+        
+           
     }
     
     @IBAction func backBtnPressed(sender: AnyObject) {
