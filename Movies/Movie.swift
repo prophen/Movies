@@ -30,7 +30,7 @@ class Movie: NSObject, NSCoding {
     var desc: String {
         get {
             if _desc == nil {
-                _desc = ""
+                _desc = "\(_title.capitalizedString) is one of my favorite movies!"
             }
             return _desc
         }
@@ -54,7 +54,12 @@ class Movie: NSObject, NSCoding {
     var detailImgPath: String {
         get {
             if _detailImgPath == nil {
-                _detailImgPath = ""
+                let img = UIImage(named: "default-image")
+                
+                let detailImgPath = DataService.instance.saveImageAndCreatePath(img!)
+                self._detailImgPath = detailImgPath
+                
+
             }
             return _detailImgPath
         }
@@ -144,7 +149,7 @@ class Movie: NSObject, NSCoding {
                 if let dict = result.value as? Dictionary<String, AnyObject> {
                     if let results = dict["results"] as? [Dictionary<String, AnyObject>] where results.count > 0 {
                         if let poster_path = results[0]["poster_path"] as? String {
-                            let imageUrl = "\(IMG_BASE)\(IMG_WIDTH_154)\(poster_path)"
+                            let imageUrl = "\(IMG_BASE)w300\(poster_path)"
                             
                             var img: UIImage!
                             
@@ -156,11 +161,6 @@ class Movie: NSObject, NSCoding {
                             }
                         }
                     
-                    } else {
-                        let img = UIImage(named: "default-image")
-                        
-                        let detailImgPath = DataService.instance.saveImageAndCreatePath(img!)
-                        self._detailImgPath = detailImgPath
                     }
 
                 }
@@ -168,13 +168,13 @@ class Movie: NSObject, NSCoding {
             dispatch_group_leave(group)
             
             dispatch_group_notify(group, dispatch_get_main_queue()) {
-                print(self.desc)
-                DataService.instance.addMovie(self)
+               DataService.instance.addMovie(self)
+               
             }
            
            
         }
-  
+        
     }
     
  

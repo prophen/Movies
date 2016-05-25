@@ -72,6 +72,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             webViewVC.urlStr = movie.imdbUrl
    
         }
+        if segue.identifier == "MovieDetailVC" {
+            if let detailsVC = segue.destinationViewController as? MovieDetailVC {
+                if let movie = sender as? Movie {
+                    detailsVC.movie = movie
+                }
+            }
+        }
    
     }
     

@@ -42,7 +42,7 @@
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <color key="sectionIndexBackgroundColor" red="1" green="0.73725490199999999" blue="0.080397439109999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" alpha="0.69999999999999996" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="180" id="6Pp-RE-Ug6" customClass="MovieCell" customModule="Movies" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" alpha="0.69999999999999996" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="180" id="6Pp-RE-Ug6" customClass="MovieCell" customModule="Movies" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Pp-RE-Ug6" id="WSC-Rr-7av">
@@ -636,76 +636,59 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="pDa-1F-h7e">
-                                <rect key="frame" x="0.0" y="110" width="600" height="330"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pDa-1F-h7e">
+                                <rect key="frame" x="20" y="157" width="560" height="371"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCh-y3-kRK" customClass="GradientView" customModule="Movies" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="F5j-V5-MZt">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="231"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="One Flew Over The Cuckoo's Nest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Jjs-Pd-Krl">
-                                                <rect key="frame" x="8" y="8" width="584" height="46"/>
-                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="25"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.99215686270000003" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="2LZ-KC-pof"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F5j-V5-MZt">
-                                        <rect key="frame" x="0.0" y="40" width="600" height="231"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cars154" translatesAutoresizingMaskIntoConstraints="NO" id="Jao-Cy-QJr">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cars154" translatesAutoresizingMaskIntoConstraints="NO" id="Jao-Cy-QJr" customClass="RoundedImages" customModule="Movies" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="154" height="231"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="154" id="a8n-MC-myt"/>
                                                     <constraint firstAttribute="height" constant="231" id="agX-Pb-J3U"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's write some filler text. Yay Movies!!" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRU-cD-VfQ">
-                                                <rect key="frame" x="154" y="0.0" width="446" height="231"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's write some filler text. Yay Movies!!" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="sRU-cD-VfQ" customClass="DetailDescLbl" customModule="Movies" customModuleProvider="target">
+                                                <rect key="frame" x="163" y="0.0" width="397" height="231"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="sRU-cD-VfQ" firstAttribute="top" secondItem="F5j-V5-MZt" secondAttribute="top" constant="20" id="mla-0J-0Ba"/>
+                                            <constraint firstAttribute="bottom" secondItem="sRU-cD-VfQ" secondAttribute="bottom" constant="20" id="qOT-Bx-zLp"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="mla-0J-0Ba"/>
+                                                <exclude reference="qOT-Bx-zLp"/>
+                                            </mask>
+                                        </variation>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7CZ-DY-oLz">
-                                        <rect key="frame" x="0.0" y="271" width="568" height="39"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="7CZ-DY-oLz">
+                                        <rect key="frame" x="0.0" y="241" width="560" height="59"/>
                                         <string key="text">Janey is new in town, and soon meets Lynne, who shares her passion for dancing in general, and "Dance TV" in particular. When a competition is announced to find a new Dance TV regular ...</string>
-                                        <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="13"/>
+                                        <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="http://IMDB.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gg1-qy-n96">
-                                        <rect key="frame" x="0.0" y="310" width="76" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="http://IMDB.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gg1-qy-n96">
+                                        <rect key="frame" x="0.0" y="310" width="560" height="61"/>
                                         <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="13"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="0.99215686270000003" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="F5j-V5-MZt" firstAttribute="top" secondItem="XCh-y3-kRK" secondAttribute="bottom" id="0O4-SA-5OQ"/>
-                                    <constraint firstItem="XCh-y3-kRK" firstAttribute="leading" secondItem="pDa-1F-h7e" secondAttribute="leading" id="1Lz-qt-FWA"/>
-                                    <constraint firstItem="XCh-y3-kRK" firstAttribute="top" secondItem="pDa-1F-h7e" secondAttribute="top" id="86E-2A-JYb"/>
-                                    <constraint firstAttribute="trailing" secondItem="XCh-y3-kRK" secondAttribute="trailing" id="Fb5-mb-tZD"/>
-                                    <constraint firstItem="F5j-V5-MZt" firstAttribute="leading" secondItem="pDa-1F-h7e" secondAttribute="leading" id="mP6-3g-acB"/>
-                                    <constraint firstAttribute="trailing" secondItem="F5j-V5-MZt" secondAttribute="trailing" id="uVa-Ia-nVs"/>
+                                    <constraint firstItem="Gg1-qy-n96" firstAttribute="leading" secondItem="pDa-1F-h7e" secondAttribute="leading" id="6pn-of-eMF"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gg1-qy-n96" secondAttribute="trailing" id="G2I-VJ-mXO"/>
                                 </constraints>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="startQuote" translatesAutoresizingMaskIntoConstraints="NO" id="ie6-DM-lPG">
-                                <rect key="frame" x="154" y="457" width="32" height="30"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="endQuote" translatesAutoresizingMaskIntoConstraints="NO" id="OoC-42-KLU">
-                                <rect key="frame" x="518" y="495" width="30" height="27"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="endQuote" translatesAutoresizingMaskIntoConstraints="NO" id="OoC-42-KLU">
+                                <rect key="frame" x="545" y="356" width="30" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="3Tg-MW-y2F"/>
                                     <constraint firstAttribute="width" constant="30" id="mDt-64-tck"/>
@@ -763,34 +746,72 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="startQuote" translatesAutoresizingMaskIntoConstraints="NO" id="ie6-DM-lPG">
+                                <rect key="frame" x="192" y="160" width="32" height="30"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One Flew Over The Cuckoo's Nest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Jjs-Pd-Krl" customClass="DetailTitleLbl" customModule="Movies" customModuleProvider="target">
+                                <rect key="frame" x="20" y="97" width="560" height="50"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Xwi-jF-IpS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.73725490199999999" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ie6-DM-lPG" firstAttribute="top" secondItem="sRU-cD-VfQ" secondAttribute="top" id="3VQ-gj-kwK"/>
                             <constraint firstItem="pDa-1F-h7e" firstAttribute="top" secondItem="0Pb-y7-Rlm" secondAttribute="bottom" constant="20" id="7X1-LG-nRM"/>
-                            <constraint firstAttribute="trailing" secondItem="pDa-1F-h7e" secondAttribute="trailing" id="BIb-3z-3Vh"/>
+                            <constraint firstItem="Jjs-Pd-Krl" firstAttribute="leading" secondItem="hbK-cO-dPp" secondAttribute="leadingMargin" id="A0q-LM-jMq"/>
+                            <constraint firstAttribute="trailing" secondItem="pDa-1F-h7e" secondAttribute="trailing" constant="20" id="BIb-3z-3Vh"/>
                             <constraint firstItem="ie6-DM-lPG" firstAttribute="leading" secondItem="sRU-cD-VfQ" secondAttribute="leading" id="F0Z-e0-bTv"/>
+                            <constraint firstItem="pDa-1F-h7e" firstAttribute="top" secondItem="Jjs-Pd-Krl" secondAttribute="bottom" constant="10" id="HQa-Gd-sNl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0Pb-y7-Rlm" secondAttribute="trailing" constant="-20" id="HX0-G0-uob"/>
                             <constraint firstItem="ie6-DM-lPG" firstAttribute="leading" secondItem="sRU-cD-VfQ" secondAttribute="leading" id="IKS-B8-b3Y"/>
-                            <constraint firstItem="OoC-42-KLU" firstAttribute="bottom" secondItem="sRU-cD-VfQ" secondAttribute="bottom" id="IPt-4g-Luh"/>
+                            <constraint firstItem="OoC-42-KLU" firstAttribute="bottom" secondItem="sRU-cD-VfQ" secondAttribute="bottom" constant="-5" id="IPt-4g-Luh"/>
+                            <constraint firstItem="ie6-DM-lPG" firstAttribute="leading" secondItem="sRU-cD-VfQ" secondAttribute="leading" constant="5" id="Le3-44-ZPo"/>
                             <constraint firstItem="sFB-is-NJ2" firstAttribute="top" secondItem="Tbw-4N-fSt" secondAttribute="bottom" id="Phw-RE-IfR"/>
                             <constraint firstItem="Tbw-4N-fSt" firstAttribute="leading" secondItem="hbK-cO-dPp" secondAttribute="leadingMargin" constant="-20" id="Uhv-Qq-3Hv"/>
+                            <constraint firstItem="ie6-DM-lPG" firstAttribute="leading" secondItem="sRU-cD-VfQ" secondAttribute="leading" id="WMC-9C-Jn3"/>
                             <constraint firstItem="pDa-1F-h7e" firstAttribute="top" secondItem="0Pb-y7-Rlm" secondAttribute="bottom" constant="20" id="YE9-Qc-qZA"/>
+                            <constraint firstItem="OoC-42-KLU" firstAttribute="trailing" secondItem="sRU-cD-VfQ" secondAttribute="trailing" constant="-5" id="cpt-Pq-NaA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jjs-Pd-Krl" secondAttribute="trailing" id="dDq-S2-Ifq"/>
                             <constraint firstItem="OoC-42-KLU" firstAttribute="trailing" secondItem="sRU-cD-VfQ" secondAttribute="trailing" id="hT2-1u-CIQ"/>
                             <constraint firstItem="0Pb-y7-Rlm" firstAttribute="top" secondItem="hbK-cO-dPp" secondAttribute="topMargin" id="hgc-gs-X9w"/>
                             <constraint firstItem="0Pb-y7-Rlm" firstAttribute="leading" secondItem="hbK-cO-dPp" secondAttribute="leadingMargin" constant="-20" id="icY-17-OdC"/>
                             <constraint firstItem="ie6-DM-lPG" firstAttribute="top" secondItem="pDa-1F-h7e" secondAttribute="bottom" constant="20" id="idn-W0-wPX"/>
-                            <constraint firstItem="pDa-1F-h7e" firstAttribute="leading" secondItem="hbK-cO-dPp" secondAttribute="leading" id="kSV-B8-YE1"/>
+                            <constraint firstItem="pDa-1F-h7e" firstAttribute="leading" secondItem="hbK-cO-dPp" secondAttribute="leading" constant="20" id="kSV-B8-YE1"/>
+                            <constraint firstItem="Jjs-Pd-Krl" firstAttribute="top" secondItem="0Pb-y7-Rlm" secondAttribute="bottom" constant="10" id="mEr-eK-pTs"/>
                             <constraint firstItem="ie6-DM-lPG" firstAttribute="top" secondItem="sRU-cD-VfQ" secondAttribute="top" id="q5S-E0-VkU"/>
+                            <constraint firstItem="ie6-DM-lPG" firstAttribute="top" secondItem="sRU-cD-VfQ" secondAttribute="top" id="qm5-UE-qVO"/>
+                            <constraint firstItem="ie6-DM-lPG" firstAttribute="top" secondItem="sRU-cD-VfQ" secondAttribute="top" constant="5" id="tFB-ng-PM4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Tbw-4N-fSt" secondAttribute="trailing" constant="-20" id="vRo-3r-Kjr"/>
+                            <constraint firstItem="Tbw-4N-fSt" firstAttribute="top" secondItem="pDa-1F-h7e" secondAttribute="bottom" constant="10" id="wa1-SE-b5h"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="7X1-LG-nRM"/>
+                                <exclude reference="YE9-Qc-qZA"/>
+                                <exclude reference="3VQ-gj-kwK"/>
                                 <exclude reference="F0Z-e0-bTv"/>
+                                <exclude reference="IKS-B8-b3Y"/>
+                                <exclude reference="WMC-9C-Jn3"/>
+                                <exclude reference="idn-W0-wPX"/>
                                 <exclude reference="q5S-E0-VkU"/>
+                                <exclude reference="qm5-UE-qVO"/>
+                                <exclude reference="hT2-1u-CIQ"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="descLbl" destination="sRU-cD-VfQ" id="g4b-pF-z64"/>
+                        <outlet property="imdbLbl" destination="Gg1-qy-n96" id="lyH-Uu-fSq"/>
+                        <outlet property="plotLbl" destination="7CZ-DY-oLz" id="Vhd-Bm-GLW"/>
+                        <outlet property="posterImg" destination="Jao-Cy-QJr" id="pof-66-Rb2"/>
+                        <outlet property="titleLbl" destination="Jjs-Pd-Krl" id="7dY-f7-hQH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Vr-kE-RRx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
