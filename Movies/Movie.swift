@@ -16,7 +16,8 @@ class Movie: NSObject, NSCoding {
     private var _plot: String!
     private var _detailImgPath: String!
     private var _imdbUrl: String!
-    
+    private var _imdbID: String!
+    let group = dispatch_group_create()
     
     var title: String {
         get {
@@ -50,7 +51,17 @@ class Movie: NSObject, NSCoding {
             _plot = newValue
         }
     }
-    
+    var imdbID: String {
+        get {
+            if _imdbID == nil  {
+                _imdbID = ""
+            }
+            return _imdbID
+        }
+        set {
+            _imdbID = newValue
+        }
+    }
     var detailImgPath: String {
         get {
             if _detailImgPath == nil {
@@ -96,6 +107,7 @@ class Movie: NSObject, NSCoding {
         self._detailImgPath = aDecoder.decodeObjectForKey("detailImgPath") as? String
         self._plot = aDecoder.decodeObjectForKey("plot") as? String
         self._imdbUrl = aDecoder.decodeObjectForKey("imdbUrl") as? String
+        self._imdbID = aDecoder.decodeObjectForKey("imdbID") as? String
     }
 
     func encodeWithCoder(aCoder: NSCoder) {
@@ -104,78 +116,77 @@ class Movie: NSObject, NSCoding {
         aCoder.encodeObject(self._title, forKey: "title")
         aCoder.encodeObject(self._plot, forKey: "plot")
         aCoder.encodeObject(self._imdbUrl, forKey:  "imdbUrl")
+        aCoder.encodeObject(self._imdbID, forKey:  "imdbID")
     }
 
-    
-    func downloadMovieDetails(movie:Movie){
-        
-        let group = dispatch_group_create()
-        
-        self._title = movie.title
-        self._desc = movie.desc
-        
-        let requestTitle = movie.title.stringByReplacingOccurrencesOfString(" ", withString: "+")
-        let omdbUrl = "\(OMDB_BASE)\(requestTitle)\(OMDB_PARAMETERS))"
-        let url = NSURL(string: omdbUrl)!
-        
-       dispatch_group_enter(group)
-        Alamofire.request(.GET, url).responseJSON {
-            response in
-            let result = response.result
-            
-            
-            if let dict = result.value as? Dictionary<String, AnyObject> {
-                if let plot = dict["Plot"] as? String {
-                    self._plot = plot
-                }
-                if let imdbId = dict["imdbID"] as? String {
-                    self._imdbUrl  = "\(IMDB_BASE)\(imdbId)"
-                }
-            }
-            dispatch_group_leave(group)
-        }
-    
-        // get poster img
-        
-        let tmdbUrl = "\(TMDB_BASE)\(API_KEY)\(TMDB_PARAMETERS)\(requestTitle)"
+    func getPosterImg(imdbID: String) -> String{
+        let tmdbUrl = "\(TMDB_BASE)\(imdbID)\(TMDB_APPEND_TO_IMDB_ID)\(API_KEY)"
         let imgUrl = NSURL(string: tmdbUrl)!
-        
-        dispatch_group_enter(group)
+
         Alamofire.request(.GET, imgUrl).responseJSON {
             response in
-           
             let result = response.result
             if (result.value != nil) {
+             
                 if let dict = result.value as? Dictionary<String, AnyObject> {
-                    if let results = dict["results"] as? [Dictionary<String, AnyObject>] where results.count > 0 {
+                    if let results = dict["movie_results"] as? [Dictionary<String, AnyObject>] where results.count > 0 {
                         if let poster_path = results[0]["poster_path"] as? String {
                             let imageUrl = "\(IMG_BASE)w300\(poster_path)"
-                            
+                            print(imageUrl)
                             var img: UIImage!
-                            
                             let url = NSURL(string: imageUrl)!
                             if let data = NSData(contentsOfURL: url) {
                                 img = UIImage(data: data)
                                 let detailImgPath = DataService.instance.saveImageAndCreatePath(img)
                                 self._detailImgPath = detailImgPath
+                                dispatch_group_leave(self.group)
                             }
                         }
-                    
                     }
-
                 }
             }
-            dispatch_group_leave(group)
-            
-            dispatch_group_notify(group, dispatch_get_main_queue()) {
-               DataService.instance.addMovie(self)
-               
-            }
-           
-           
         }
         
+         return detailImgPath
     }
     
+    func downloadMovieDetails(movie:Movie){
+        
+
+        self._title = movie.title
+        self._desc = movie.desc
+        let requestTitle = movie.title.stringByReplacingOccurrencesOfString(" ", withString: "+")
+        let omdbUrl = "\(OMDB_BASE)\(requestTitle)\(OMDB_PARAMETERS))"
+        let url = NSURL(string: omdbUrl)!
+        
+        dispatch_group_enter(group)
+        Alamofire.request(.GET, url).responseJSON {
+            response in
+            let result = response.result
+            if let dict = result.value as? Dictionary<String, AnyObject> {
+                
+                if let plot = dict["Plot"] as? String {
+                    self._plot = plot
+                }
+                if let imdbId = dict["imdbID"] as? String {
+                    self._imdbID = imdbId
+                    self._imdbUrl  = "\(IMDB_BASE)\(imdbId)"
+                    dispatch_group_leave(self.group)
+                    
+                    dispatch_group_enter(self.group)
+                    self._detailImgPath = self.getPosterImg(imdbId)
+                    
+                    
+                    dispatch_group_notify(self.group, dispatch_get_main_queue()) {
+                        print("both requests done")
+                     DataService.instance.addMovie(self)
+                    }
+                } else {
+                    DataService.instance.addMovie(self)
+                }
+            }
+        
+        }
  
+    }
 }
