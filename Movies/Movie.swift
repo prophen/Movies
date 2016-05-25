@@ -101,19 +101,23 @@ class Movie: NSObject, NSCoding {
         aCoder.encodeObject(self._imdbUrl, forKey:  "imdbUrl")
     }
 
-    func downloadMovieDetails(completed:DownloadComplete, movie:Movie){
+    
+    func downloadMovieDetails(movie:Movie){
         
-        let title = movie.title
+        let group = dispatch_group_create()
         
-        self._title = title
+        self._title = movie.title
         self._desc = movie.desc
         
-        let requestTitle = title.stringByReplacingOccurrencesOfString(" ", withString: "+")
+        let requestTitle = movie.title.stringByReplacingOccurrencesOfString(" ", withString: "+")
         let omdbUrl = "\(OMDB_BASE)\(requestTitle)\(OMDB_PARAMETERS))"
         let url = NSURL(string: omdbUrl)!
+        
+       dispatch_group_enter(group)
         Alamofire.request(.GET, url).responseJSON {
             response in
             let result = response.result
+            
             
             if let dict = result.value as? Dictionary<String, AnyObject> {
                 if let plot = dict["Plot"] as? String {
@@ -123,14 +127,18 @@ class Movie: NSObject, NSCoding {
                     self._imdbUrl  = "\(IMDB_BASE)\(imdbId)"
                 }
             }
+            dispatch_group_leave(group)
         }
     
         // get poster img
+        
         let tmdbUrl = "\(TMDB_BASE)\(API_KEY)\(TMDB_PARAMETERS)\(requestTitle)"
         let imgUrl = NSURL(string: tmdbUrl)!
         
+        dispatch_group_enter(group)
         Alamofire.request(.GET, imgUrl).responseJSON {
             response in
+           
             let result = response.result
             if (result.value != nil) {
                 if let dict = result.value as? Dictionary<String, AnyObject> {
@@ -157,14 +165,17 @@ class Movie: NSObject, NSCoding {
 
                 }
             }
-            completed()
-            DataService.instance.addMovie(self)
+            dispatch_group_leave(group)
+            
+            dispatch_group_notify(group, dispatch_get_main_queue()) {
+                print(self.desc)
+                DataService.instance.addMovie(self)
+            }
+           
            
         }
   
     }
     
-    func getMoviePoster(){
-        
-    }
+ 
 }

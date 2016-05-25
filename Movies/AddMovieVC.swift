@@ -26,7 +26,7 @@ class AddMovieVC: UIViewController {
                 movie.desc = descField.text!
             }
             
-            movie.downloadMovieDetails ({ () -> () in }, movie: movie)
+            movie.downloadMovieDetails(movie)
             dismissViewControllerAnimated(true, completion: nil)
         }
     }

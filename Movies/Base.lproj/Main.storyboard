@@ -35,55 +35,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lQ3-wn-dGx" customClass="GradientView" customModule="Movies" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="538" width="600" height="62"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQm-Df-d0I">
-                                        <rect key="frame" x="495" y="15" width="97" height="32"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="32" id="BUi-7A-h3o"/>
-                                            <constraint firstAttribute="height" constant="32" id="bd8-0i-sh9"/>
-                                            <constraint firstAttribute="width" constant="97" id="q6q-Ua-b0f"/>
-                                            <constraint firstAttribute="width" constant="97" id="teH-cQ-uai"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="15"/>
-                                        <state key="normal" title="credits">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="BUi-7A-h3o"/>
-                                                <exclude reference="teH-cQ-uai"/>
-                                            </mask>
-                                        </variation>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.99215686270000003" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="FQm-Df-d0I" secondAttribute="bottom" constant="15" id="4xq-Zf-KiV"/>
-                                    <constraint firstAttribute="bottom" secondItem="FQm-Df-d0I" secondAttribute="bottom" constant="15" id="6La-dF-bjt"/>
-                                    <constraint firstAttribute="trailing" secondItem="FQm-Df-d0I" secondAttribute="trailing" constant="8" id="XR1-HQ-BKo"/>
-                                    <constraint firstAttribute="trailing" secondItem="FQm-Df-d0I" secondAttribute="trailing" constant="8" id="cT1-KU-hZC"/>
-                                    <constraint firstAttribute="height" constant="62" id="vZM-zd-HVz"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="0.69999999999999996"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="6La-dF-bjt"/>
-                                        <exclude reference="cT1-KU-hZC"/>
-                                    </mask>
-                                </variation>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="98" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N8q-Nk-oID">
                                 <rect key="frame" x="0.0" y="87" width="600" height="451"/>
                                 <color key="backgroundColor" red="1" green="0.73725490199999999" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -134,24 +85,24 @@
                                                     <rect key="frame" x="132" y="20" width="448" height="139"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Cars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="cEx-OT-7ab">
-                                                            <rect key="frame" x="0.0" y="0.0" width="448" height="48"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="448" height="50"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="26"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Absolute Worst Pixar Movie Ever." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="lPq-v8-aPj">
-                                                            <rect key="frame" x="0.0" y="52" width="448" height="58"/>
+                                                            <rect key="frame" x="0.0" y="54" width="448" height="56"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="20"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNk-Dn-8Oc">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNk-Dn-8Oc">
                                                             <rect key="frame" x="0.0" y="114" width="448" height="25"/>
                                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.69522938829787229" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="25" id="ZBn-R1-NoN"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="15"/>
+                                                            <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="12"/>
                                                             <state key="normal" title="Button">
                                                                 <color key="titleColor" red="0.99215686270000003" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             </state>
@@ -205,6 +156,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRp-V8-Prh">
                                         <rect key="frame" x="546" y="32" width="32" height="32"/>
+                                        <accessibility key="accessibilityConfiguration" label="Add Movie Button"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="32" id="Xth-XV-VRc"/>
                                             <constraint firstAttribute="height" constant="32" id="tGN-7X-OMC"/>
@@ -216,6 +168,10 @@
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movies-logo" translatesAutoresizingMaskIntoConstraints="NO" id="e6Q-vE-Jjr">
                                         <rect key="frame" x="220" y="23" width="161" height="56"/>
+                                        <accessibility key="accessibilityConfiguration" label="Movies! Header ">
+                                            <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="X8M-GQ-Pus"/>
                                             <constraint firstAttribute="width" constant="161" id="b79-hb-xNF"/>
@@ -248,6 +204,58 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lQ3-wn-dGx" customClass="GradientView" customModule="Movies" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="538" width="600" height="62"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQm-Df-d0I">
+                                        <rect key="frame" x="495" y="15" width="97" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="BUi-7A-h3o"/>
+                                            <constraint firstAttribute="height" constant="32" id="bd8-0i-sh9"/>
+                                            <constraint firstAttribute="width" constant="97" id="q6q-Ua-b0f"/>
+                                            <constraint firstAttribute="width" constant="97" id="teH-cQ-uai"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="15"/>
+                                        <state key="normal" title="credits">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="BUi-7A-h3o"/>
+                                                <exclude reference="teH-cQ-uai"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="d1t-jH-twq" kind="show" id="Ovt-Mr-XTE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="FQm-Df-d0I" secondAttribute="bottom" constant="15" id="4xq-Zf-KiV"/>
+                                    <constraint firstAttribute="bottom" secondItem="FQm-Df-d0I" secondAttribute="bottom" constant="15" id="6La-dF-bjt"/>
+                                    <constraint firstAttribute="trailing" secondItem="FQm-Df-d0I" secondAttribute="trailing" constant="8" id="XR1-HQ-BKo"/>
+                                    <constraint firstAttribute="trailing" secondItem="FQm-Df-d0I" secondAttribute="trailing" constant="8" id="cT1-KU-hZC"/>
+                                    <constraint firstAttribute="height" constant="62" id="vZM-zd-HVz"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6La-dF-bjt"/>
+                                        <exclude reference="cT1-KU-hZC"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.73725490196078436" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -270,7 +278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-130" y="248"/>
+            <point key="canvasLocation" x="-72" y="-114"/>
         </scene>
         <!--Add MovieVC-->
         <scene sceneID="c2i-lY-f9x">
@@ -337,6 +345,7 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utc-qA-NXx">
                                         <rect key="frame" x="17" y="35" width="32" height="32"/>
+                                        <accessibility key="accessibilityConfiguration" label="Back Button"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="32" id="6R8-ze-ZLO"/>
                                             <constraint firstAttribute="height" constant="32" id="mz6-aP-VT5"/>
@@ -478,7 +487,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bgc-v7-reh">
                                 <rect key="frame" x="0.0" y="87" width="600" height="451"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.73725490196078436" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.73725490199999999" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -502,6 +511,106 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zP7-mq-KBt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-139" y="1008"/>
+        </scene>
+        <!--CreditsVC-->
+        <scene sceneID="P20-vW-DLQ">
+            <objects>
+                <viewController id="d1t-jH-twq" customClass="CreditsVC" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EA1-gN-gYH"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZhB-bL-jLI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dbn-YA-UZG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fao-x3-4hI" customClass="GradientView" customModule="Movies" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="538" width="600" height="62"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="Uyx-6R-MXZ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6mW-Vw-m1h" customClass="GradientView" customModule="Movies" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="87"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movies-logo" translatesAutoresizingMaskIntoConstraints="NO" id="C2n-K0-A62">
+                                        <rect key="frame" x="220" y="23" width="161" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="161" id="DGp-fq-h2X"/>
+                                            <constraint firstAttribute="height" constant="56" id="tMf-bm-Z6A"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNI-IO-Fto">
+                                        <rect key="frame" x="17" y="35" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="pX6-0L-iJk"/>
+                                            <constraint firstAttribute="width" constant="32" id="z6a-0O-AUj"/>
+                                        </constraints>
+                                        <state key="normal" image="back-button"/>
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="d1t-jH-twq" eventType="touchUpInside" id="I97-RK-6TY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="KNI-IO-Fto" secondAttribute="trailing" constant="22" id="5bA-Bu-U9u"/>
+                                    <constraint firstAttribute="bottom" secondItem="C2n-K0-A62" secondAttribute="bottom" constant="8" id="9S9-89-BoI"/>
+                                    <constraint firstItem="C2n-K0-A62" firstAttribute="top" secondItem="6mW-Vw-m1h" secondAttribute="top" constant="23" id="Zej-jK-nA4"/>
+                                    <constraint firstItem="C2n-K0-A62" firstAttribute="centerY" secondItem="6mW-Vw-m1h" secondAttribute="centerY" id="hia-3s-1CY"/>
+                                    <constraint firstAttribute="bottom" secondItem="KNI-IO-Fto" secondAttribute="bottom" constant="20" id="hlB-CO-Gdc"/>
+                                    <constraint firstItem="C2n-K0-A62" firstAttribute="centerX" secondItem="6mW-Vw-m1h" secondAttribute="centerX" id="jdA-7F-Mtx"/>
+                                    <constraint firstAttribute="bottom" secondItem="KNI-IO-Fto" secondAttribute="bottom" constant="23" id="sDp-dm-I8Q"/>
+                                    <constraint firstItem="KNI-IO-Fto" firstAttribute="leading" secondItem="6mW-Vw-m1h" secondAttribute="leading" constant="17" id="twe-SX-PBj"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5bA-Bu-U9u"/>
+                                        <exclude reference="sDp-dm-I8Q"/>
+                                        <exclude reference="hia-3s-1CY"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6jQ-9A-8fB">
+                                <rect key="frame" x="0.0" y="87" width="600" height="451"/>
+                                <color key="backgroundColor" red="1" green="0.73725490196078436" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.73725490199999999" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6mW-Vw-m1h" firstAttribute="leading" secondItem="Dbn-YA-UZG" secondAttribute="leadingMargin" constant="-20" id="1fu-6V-jH2"/>
+                            <constraint firstItem="6mW-Vw-m1h" firstAttribute="top" secondItem="Dbn-YA-UZG" secondAttribute="topMargin" id="Awf-Vs-azX"/>
+                            <constraint firstItem="6jQ-9A-8fB" firstAttribute="top" secondItem="6mW-Vw-m1h" secondAttribute="bottom" id="OYD-gj-NsF"/>
+                            <constraint firstItem="ZhB-bL-jLI" firstAttribute="top" secondItem="Fao-x3-4hI" secondAttribute="bottom" id="RK0-gN-Dnm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fao-x3-4hI" secondAttribute="trailing" constant="-20" id="SX7-Ak-5Wb"/>
+                            <constraint firstAttribute="trailing" secondItem="6jQ-9A-8fB" secondAttribute="trailing" id="SgA-v5-0Ln"/>
+                            <constraint firstItem="6jQ-9A-8fB" firstAttribute="leading" secondItem="Dbn-YA-UZG" secondAttribute="leading" id="fig-S9-60N"/>
+                            <constraint firstItem="Fao-x3-4hI" firstAttribute="top" secondItem="6jQ-9A-8fB" secondAttribute="bottom" id="ibP-Dp-0CF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6mW-Vw-m1h" secondAttribute="trailing" constant="-20" id="opb-vg-NAO"/>
+                            <constraint firstItem="Fao-x3-4hI" firstAttribute="leading" secondItem="Dbn-YA-UZG" secondAttribute="leadingMargin" constant="-20" id="yMx-p6-cDR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8N2-ky-z8q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-847" y="550"/>
         </scene>
         <!--Movie DetailVC-->
         <scene sceneID="UAf-wL-2Nj">

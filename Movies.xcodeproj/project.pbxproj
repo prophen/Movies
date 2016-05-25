@@ -18,11 +18,12 @@
 		E60A709F1CF2CF6400B11AAE /* Oswald-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E60A709B1CF2CF6400B11AAE /* Oswald-Light.ttf */; };
 		E60A70A01CF2CF6400B11AAE /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E60A709C1CF2CF6400B11AAE /* Oswald-Regular.ttf */; };
 		E60A70A21CF2D1E800B11AAE /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60A70A11CF2D1E800B11AAE /* GradientView.swift */; };
+		E6300F441CF56CD200C52B3C /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6300F431CF56CD200C52B3C /* Authentication.swift */; };
+		E6300F461CF584E300C52B3C /* CreditsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6300F451CF584E300C52B3C /* CreditsVC.swift */; };
 		E66BC1B71CF43E5C00298233 /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66BC1B61CF43E5C00298233 /* WebViewVC.swift */; };
 		E66BC1B91CF4492D00298233 /* MovieDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66BC1B81CF4492D00298233 /* MovieDetailVC.swift */; };
 		E670FB161CF2F3C0009A5FF0 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E670FB151CF2F3C0009A5FF0 /* Movie.swift */; };
 		E670FB181CF2F73D009A5FF0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E670FB171CF2F73D009A5FF0 /* Constants.swift */; };
-		E670FB1A1CF2F74A009A5FF0 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E670FB191CF2F74A009A5FF0 /* Authentication.swift */; };
 		E670FB1C1CF2F805009A5FF0 /* RoundedImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = E670FB1B1CF2F805009A5FF0 /* RoundedImages.swift */; };
 		E670FB1E1CF2FB4B009A5FF0 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E670FB1D1CF2FB4B009A5FF0 /* MovieCell.swift */; };
 		E670FB221CF30326009A5FF0 /* AddMovieVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E670FB211CF30326009A5FF0 /* AddMovieVC.swift */; };
@@ -45,11 +46,12 @@
 		E60A709B1CF2CF6400B11AAE /* Oswald-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Light.ttf"; sourceTree = "<group>"; };
 		E60A709C1CF2CF6400B11AAE /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Regular.ttf"; sourceTree = "<group>"; };
 		E60A70A11CF2D1E800B11AAE /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		E6300F431CF56CD200C52B3C /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		E6300F451CF584E300C52B3C /* CreditsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsVC.swift; sourceTree = "<group>"; };
 		E66BC1B61CF43E5C00298233 /* WebViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
 		E66BC1B81CF4492D00298233 /* MovieDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailVC.swift; sourceTree = "<group>"; };
 		E670FB151CF2F3C0009A5FF0 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		E670FB171CF2F73D009A5FF0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		E670FB191CF2F74A009A5FF0 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		E670FB1B1CF2F805009A5FF0 /* RoundedImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImages.swift; sourceTree = "<group>"; };
 		E670FB1D1CF2FB4B009A5FF0 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		E670FB211CF30326009A5FF0 /* AddMovieVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMovieVC.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				E66BC1B61CF43E5C00298233 /* WebViewVC.swift */,
 				E670FB211CF30326009A5FF0 /* AddMovieVC.swift */,
 				E66BC1B81CF4492D00298233 /* MovieDetailVC.swift */,
+				E6300F451CF584E300C52B3C /* CreditsVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -154,7 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				E670FB171CF2F73D009A5FF0 /* Constants.swift */,
-				E670FB191CF2F74A009A5FF0 /* Authentication.swift */,
+				E6300F431CF56CD200C52B3C /* Authentication.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -315,15 +318,16 @@
 				E670FB1C1CF2F805009A5FF0 /* RoundedImages.swift in Sources */,
 				E670FB181CF2F73D009A5FF0 /* Constants.swift in Sources */,
 				E670FB1E1CF2FB4B009A5FF0 /* MovieCell.swift in Sources */,
+				E6300F461CF584E300C52B3C /* CreditsVC.swift in Sources */,
 				E60A70841CF2CEBA00B11AAE /* ViewController.swift in Sources */,
 				E66BC1B71CF43E5C00298233 /* WebViewVC.swift in Sources */,
 				E60A70821CF2CEBA00B11AAE /* AppDelegate.swift in Sources */,
 				E670FB161CF2F3C0009A5FF0 /* Movie.swift in Sources */,
 				E60A70A21CF2D1E800B11AAE /* GradientView.swift in Sources */,
-				E670FB1A1CF2F74A009A5FF0 /* Authentication.swift in Sources */,
 				E670FB221CF30326009A5FF0 /* AddMovieVC.swift in Sources */,
 				E66BC1B91CF4492D00298233 /* MovieDetailVC.swift in Sources */,
 				E670FB251CF30B30009A5FF0 /* DataService.swift in Sources */,
+				E6300F441CF56CD200C52B3C /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
