@@ -14,5 +14,8 @@ class DetailTitleLbl: UILabel {
         layer.cornerRadius = 10.0
         clipsToBounds = true
     }
-
+    override func drawTextInRect(rect: CGRect) {
+        let insets = UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0)
+        super.drawTextInRect(UIEdgeInsetsInsetRect(rect, insets))
+    }
 }

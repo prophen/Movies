@@ -24,7 +24,7 @@ class MovieCell: UITableViewCell {
     func configureCell(movie: Movie) {
         titleLbl.text = movie.title.capitalizedString
         descLbl.text = movie.desc
-        let imdbUrl: String = movie.imdbUrl
+        let imdbUrl: String = movie.imdbUrl.stringByReplacingOccurrencesOfString("http://www.", withString: "")
         imdbBtn.setTitle(imdbUrl, forState:.Normal )
         thumbImg.image = DataService.instance.imageForPath(movie.detailImgPath)
     }

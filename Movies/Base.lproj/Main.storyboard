@@ -3,10 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Oswald-Light.ttf">
+            <string>Oswald-Light</string>
+            <string>Oswald-Light</string>
+            <string>Oswald-Light</string>
             <string>Oswald-Light</string>
             <string>Oswald-Light</string>
             <string>Oswald-Light</string>
@@ -35,122 +39,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="98" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N8q-Nk-oID">
-                                <rect key="frame" x="0.0" y="87" width="600" height="451"/>
-                                <color key="backgroundColor" red="1" green="0.73725490199999999" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <color key="sectionIndexBackgroundColor" red="1" green="0.73725490199999999" blue="0.080397439109999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" alpha="0.69999999999999996" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="180" id="6Pp-RE-Ug6" customClass="MovieCell" customModule="Movies" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="180"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Pp-RE-Ug6" id="WSC-Rr-7av">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="180"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-image" translatesAutoresizingMaskIntoConstraints="NO" id="14Y-7V-lDB" customClass="RoundedImages" customModule="Movies" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="20" width="92" height="138"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="138" id="Scl-8k-FAt"/>
-                                                        <constraint firstAttribute="width" constant="92" id="lit-ae-9mM"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxS-KQ-PrB" customClass="GradientView" customModule="Movies" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="178" width="600" height="1"/>
-                                                    <color key="backgroundColor" red="0.86984620420000003" green="0.86984620420000003" blue="0.86984620420000003" alpha="0.0" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="1" id="EQ3-Kh-Eic"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                            <real key="value" value="1"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                            <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                            <real key="value" value="0.69999999999999996"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="topColor">
-                                                            <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
-                                                            <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="atc-ds-Vav">
-                                                    <rect key="frame" x="132" y="20" width="448" height="139"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Cars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="cEx-OT-7ab">
-                                                            <rect key="frame" x="0.0" y="0.0" width="448" height="50"/>
-                                                            <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="26"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Absolute Worst Pixar Movie Ever." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="lPq-v8-aPj">
-                                                            <rect key="frame" x="0.0" y="54" width="448" height="56"/>
-                                                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="20"/>
-                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNk-Dn-8Oc">
-                                                            <rect key="frame" x="0.0" y="114" width="448" height="25"/>
-                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.69522938829787229" colorSpace="calibratedRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="25" id="ZBn-R1-NoN"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="12"/>
-                                                            <state key="normal" title="Button">
-                                                                <color key="titleColor" red="0.99215686270000003" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </state>
-                                                            <connections>
-                                                                <segue destination="kvY-iw-FjY" kind="show" identifier="WebViewVC" id="hAR-Kq-VyT"/>
-                                                            </connections>
-                                                        </button>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="139" id="HwG-v8-70w"/>
-                                                    </constraints>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="qxS-KQ-PrB" secondAttribute="trailing" constant="-8" id="0W4-lz-azq"/>
-                                                <constraint firstItem="qxS-KQ-PrB" firstAttribute="leading" secondItem="WSC-Rr-7av" secondAttribute="leadingMargin" constant="-8" id="0ZG-jI-h04"/>
-                                                <constraint firstAttribute="trailing" secondItem="atc-ds-Vav" secondAttribute="trailing" constant="20" id="4VB-jV-3Ij"/>
-                                                <constraint firstItem="14Y-7V-lDB" firstAttribute="top" secondItem="WSC-Rr-7av" secondAttribute="top" constant="20" id="52s-53-UrN"/>
-                                                <constraint firstItem="atc-ds-Vav" firstAttribute="top" secondItem="WSC-Rr-7av" secondAttribute="top" constant="20" id="6kh-b5-MBR"/>
-                                                <constraint firstAttribute="bottom" secondItem="atc-ds-Vav" secondAttribute="bottom" constant="20" id="OKa-Me-4Ts"/>
-                                                <constraint firstItem="14Y-7V-lDB" firstAttribute="leading" secondItem="WSC-Rr-7av" secondAttribute="leading" constant="20" id="OS9-Sz-lvx"/>
-                                                <constraint firstAttribute="bottom" secondItem="14Y-7V-lDB" secondAttribute="bottom" constant="20" id="OhA-Et-Z9G"/>
-                                                <constraint firstItem="qxS-KQ-PrB" firstAttribute="top" secondItem="14Y-7V-lDB" secondAttribute="bottom" constant="20" id="TUU-mr-hVQ"/>
-                                                <constraint firstItem="14Y-7V-lDB" firstAttribute="top" secondItem="WSC-Rr-7av" secondAttribute="top" constant="20" id="UVI-en-RJY"/>
-                                                <constraint firstAttribute="bottom" secondItem="qxS-KQ-PrB" secondAttribute="bottom" id="UhC-px-TjO"/>
-                                                <constraint firstItem="14Y-7V-lDB" firstAttribute="leading" secondItem="WSC-Rr-7av" secondAttribute="leading" constant="20" id="dK2-GM-9rN"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="qxS-KQ-PrB" secondAttribute="bottom" constant="-8" id="iDe-CK-KCx"/>
-                                                <constraint firstItem="atc-ds-Vav" firstAttribute="leading" secondItem="14Y-7V-lDB" secondAttribute="trailing" constant="20" id="m6N-Zc-XBS"/>
-                                            </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="52s-53-UrN"/>
-                                                    <exclude reference="OhA-Et-Z9G"/>
-                                                    <exclude reference="dK2-GM-9rN"/>
-                                                    <exclude reference="iDe-CK-KCx"/>
-                                                </mask>
-                                            </variation>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.86984620420000003" green="0.86984620420000003" blue="0.86984620420000003" alpha="0.0" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <outlet property="descLbl" destination="lPq-v8-aPj" id="skd-3s-hoE"/>
-                                            <outlet property="imdbBtn" destination="NNk-Dn-8Oc" id="hXB-mG-S49"/>
-                                            <outlet property="thumbImg" destination="14Y-7V-lDB" id="B9j-TK-fdl"/>
-                                            <outlet property="titleLbl" destination="cEx-OT-7ab" id="1Ro-O4-0Zb"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UgV-uL-KuX" customClass="GradientView" customModule="Movies" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="87"/>
                                 <subviews>
@@ -256,8 +144,124 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="98" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N8q-Nk-oID">
+                                <rect key="frame" x="0.0" y="91" width="600" height="447"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.70381759751773054" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="180" id="6Pp-RE-Ug6" customClass="MovieCell" customModule="Movies" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="180"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Pp-RE-Ug6" id="WSC-Rr-7av">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="180"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-image" translatesAutoresizingMaskIntoConstraints="NO" id="14Y-7V-lDB" customClass="RoundedImages" customModule="Movies" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="20" width="92" height="138"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="138" id="Scl-8k-FAt"/>
+                                                        <constraint firstAttribute="width" constant="92" id="lit-ae-9mM"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxS-KQ-PrB" customClass="GradientView" customModule="Movies" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="178" width="600" height="1"/>
+                                                    <color key="backgroundColor" red="0.86984620420000003" green="0.86984620420000003" blue="0.86984620420000003" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="EQ3-Kh-Eic"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                            <real key="value" value="0.69999999999999996"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                                            <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                                            <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="atc-ds-Vav">
+                                                    <rect key="frame" x="132" y="20" width="448" height="139"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Cars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="cEx-OT-7ab">
+                                                            <rect key="frame" x="0.0" y="0.0" width="448" height="57"/>
+                                                            <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="26"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Absolute Worst Pixar Movie Ever." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="lPq-v8-aPj">
+                                                            <rect key="frame" x="0.0" y="61" width="448" height="49"/>
+                                                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="20"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNk-Dn-8Oc" customClass="RoundedBtn" customModule="Movies" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="114" width="448" height="25"/>
+                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="25" id="ZBn-R1-NoN"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="12"/>
+                                                            <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                                            <state key="normal" title="Button">
+                                                                <color key="titleColor" red="0.99215686270000003" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </state>
+                                                            <connections>
+                                                                <segue destination="kvY-iw-FjY" kind="show" identifier="WebViewVC" id="hAR-Kq-VyT"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="139" id="HwG-v8-70w"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="qxS-KQ-PrB" secondAttribute="trailing" constant="-8" id="0W4-lz-azq"/>
+                                                <constraint firstItem="qxS-KQ-PrB" firstAttribute="leading" secondItem="WSC-Rr-7av" secondAttribute="leadingMargin" constant="-8" id="0ZG-jI-h04"/>
+                                                <constraint firstAttribute="trailing" secondItem="atc-ds-Vav" secondAttribute="trailing" constant="20" id="4VB-jV-3Ij"/>
+                                                <constraint firstItem="14Y-7V-lDB" firstAttribute="top" secondItem="WSC-Rr-7av" secondAttribute="top" constant="20" id="52s-53-UrN"/>
+                                                <constraint firstItem="atc-ds-Vav" firstAttribute="top" secondItem="WSC-Rr-7av" secondAttribute="top" constant="20" id="6kh-b5-MBR"/>
+                                                <constraint firstAttribute="bottom" secondItem="atc-ds-Vav" secondAttribute="bottom" constant="20" id="OKa-Me-4Ts"/>
+                                                <constraint firstItem="14Y-7V-lDB" firstAttribute="leading" secondItem="WSC-Rr-7av" secondAttribute="leading" constant="20" id="OS9-Sz-lvx"/>
+                                                <constraint firstAttribute="bottom" secondItem="14Y-7V-lDB" secondAttribute="bottom" constant="20" id="OhA-Et-Z9G"/>
+                                                <constraint firstItem="qxS-KQ-PrB" firstAttribute="top" secondItem="14Y-7V-lDB" secondAttribute="bottom" constant="20" id="TUU-mr-hVQ"/>
+                                                <constraint firstItem="14Y-7V-lDB" firstAttribute="top" secondItem="WSC-Rr-7av" secondAttribute="top" constant="20" id="UVI-en-RJY"/>
+                                                <constraint firstAttribute="bottom" secondItem="qxS-KQ-PrB" secondAttribute="bottom" id="UhC-px-TjO"/>
+                                                <constraint firstItem="14Y-7V-lDB" firstAttribute="leading" secondItem="WSC-Rr-7av" secondAttribute="leading" constant="20" id="dK2-GM-9rN"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="qxS-KQ-PrB" secondAttribute="bottom" constant="-8" id="iDe-CK-KCx"/>
+                                                <constraint firstItem="atc-ds-Vav" firstAttribute="leading" secondItem="14Y-7V-lDB" secondAttribute="trailing" constant="20" id="m6N-Zc-XBS"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="52s-53-UrN"/>
+                                                    <exclude reference="OhA-Et-Z9G"/>
+                                                    <exclude reference="dK2-GM-9rN"/>
+                                                    <exclude reference="iDe-CK-KCx"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.73725490199999999" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="descLbl" destination="lPq-v8-aPj" id="skd-3s-hoE"/>
+                                            <outlet property="imdbBtn" destination="NNk-Dn-8Oc" id="hXB-mG-S49"/>
+                                            <outlet property="thumbImg" destination="14Y-7V-lDB" id="B9j-TK-fdl"/>
+                                            <outlet property="titleLbl" destination="cEx-OT-7ab" id="1Ro-O4-0Zb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.73725490196078436" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.73725490199999999" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="lQ3-wn-dGx" secondAttribute="trailing" constant="-20" id="86H-IH-aib"/>
                             <constraint firstItem="N8q-Nk-oID" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AwS-Pi-bet"/>
@@ -265,7 +269,7 @@
                             <constraint firstAttribute="trailing" secondItem="N8q-Nk-oID" secondAttribute="trailing" id="P4Q-am-omO"/>
                             <constraint firstItem="UgV-uL-KuX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="PYu-0g-9ix"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UgV-uL-KuX" secondAttribute="trailing" constant="-20" id="WA3-pf-Dbu"/>
-                            <constraint firstItem="N8q-Nk-oID" firstAttribute="top" secondItem="UgV-uL-KuX" secondAttribute="bottom" id="Z9V-hZ-ZZ7"/>
+                            <constraint firstItem="N8q-Nk-oID" firstAttribute="top" secondItem="UgV-uL-KuX" secondAttribute="bottom" constant="4" id="Z9V-hZ-ZZ7"/>
                             <constraint firstItem="lQ3-wn-dGx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="alW-nX-sfP"/>
                             <constraint firstItem="lQ3-wn-dGx" firstAttribute="top" secondItem="N8q-Nk-oID" secondAttribute="bottom" id="rfm-Qu-4ru"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lQ3-wn-dGx" secondAttribute="bottom" id="tRH-lp-zSF"/>
@@ -590,7 +594,92 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6jQ-9A-8fB">
                                 <rect key="frame" x="0.0" y="87" width="600" height="451"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VoE-jc-x6u" customClass="DetailDescLbl" customModule="Movies" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="20" width="560" height="411"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3NM-C5-vs2">
+                                                <rect key="frame" x="20" y="0.0" width="520" height="411"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="t3h-6L-QlQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="520" height="137"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="likeVideo" translatesAutoresizingMaskIntoConstraints="NO" id="nM3-y2-PHW">
+                                                                <rect key="frame" x="0.0" y="25" width="70" height="87"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="70" id="2fR-rG-EPc"/>
+                                                                    <constraint firstAttribute="width" secondItem="nM3-y2-PHW" secondAttribute="height" multiplier="70:87" id="Znb-wN-2b4"/>
+                                                                    <constraint firstAttribute="height" constant="87" id="syt-9S-BbA"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“Like Video” icon by Oliviu Stoian, from thenounproject.com." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="NmM-R2-8d5">
+                                                                <rect key="frame" x="80" y="58" width="440" height="21"/>
+                                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
+                                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="iOH-vb-X8z">
+                                                        <rect key="frame" x="0.0" y="137" width="520" height="137"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poster images provided by themoviedb.org" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="7dQ-Gj-hZk">
+                                                                <rect key="frame" x="0.0" y="0.0" width="520" height="59"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="BtE-4n-G7G"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
+                                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <variation key="default">
+                                                                    <mask key="constraints">
+                                                                        <exclude reference="BtE-4n-G7G"/>
+                                                                    </mask>
+                                                                </variation>
+                                                            </label>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PoweredByTMDB_Blk_Logo_Bree" translatesAutoresizingMaskIntoConstraints="NO" id="GuI-5o-roh">
+                                                                <rect key="frame" x="0.0" y="59" width="520" height="78"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="GuI-5o-roh" secondAttribute="height" multiplier="20:3" id="NvV-CD-fXF"/>
+                                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="36" id="gBN-Gp-3sd"/>
+                                                                    <constraint firstAttribute="height" constant="36" id="oD5-F3-Wkb"/>
+                                                                    <constraint firstAttribute="width" constant="160" id="pfL-0q-xfc"/>
+                                                                </constraints>
+                                                                <variation key="default">
+                                                                    <mask key="constraints">
+                                                                        <exclude reference="gBN-Gp-3sd"/>
+                                                                        <exclude reference="oD5-F3-Wkb"/>
+                                                                        <exclude reference="pfL-0q-xfc"/>
+                                                                    </mask>
+                                                                </variation>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMDb data provided by omdbapi.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="grE-Vo-8At">
+                                                        <rect key="frame" x="0.0" y="274" width="520" height="137"/>
+                                                        <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="3NM-C5-vs2" firstAttribute="top" secondItem="VoE-jc-x6u" secondAttribute="top" id="XcL-XG-QzX"/>
+                                            <constraint firstItem="3NM-C5-vs2" firstAttribute="leading" secondItem="VoE-jc-x6u" secondAttribute="leading" constant="20" id="hhf-ci-KV1"/>
+                                            <constraint firstAttribute="trailing" secondItem="3NM-C5-vs2" secondAttribute="trailing" constant="20" id="mQ6-d8-Bi6"/>
+                                            <constraint firstAttribute="bottom" secondItem="3NM-C5-vs2" secondAttribute="bottom" id="rs1-VP-mKk"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.73725490196078436" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="VoE-jc-x6u" firstAttribute="top" secondItem="6jQ-9A-8fB" secondAttribute="top" constant="20" id="Hxo-T3-I7a"/>
+                                    <constraint firstAttribute="trailing" secondItem="VoE-jc-x6u" secondAttribute="trailing" constant="20" id="ML8-k5-dyX"/>
+                                    <constraint firstItem="VoE-jc-x6u" firstAttribute="leading" secondItem="6jQ-9A-8fB" secondAttribute="leading" constant="20" id="TdY-6b-PzY"/>
+                                    <constraint firstAttribute="bottom" secondItem="VoE-jc-x6u" secondAttribute="bottom" constant="20" id="bQB-DL-0qO"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.73725490199999999" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -610,7 +699,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8N2-ky-z8q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-847" y="550"/>
+            <point key="canvasLocation" x="-685" y="523"/>
         </scene>
         <!--Movie DetailVC-->
         <scene sceneID="UAf-wL-2Nj">
@@ -636,7 +725,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pDa-1F-h7e">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="pDa-1F-h7e">
                                 <rect key="frame" x="20" y="157" width="560" height="371"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="F5j-V5-MZt">
@@ -645,8 +734,9 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cars154" translatesAutoresizingMaskIntoConstraints="NO" id="Jao-Cy-QJr" customClass="RoundedImages" customModule="Movies" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="154" height="231"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="154" id="a8n-MC-myt"/>
-                                                    <constraint firstAttribute="height" constant="231" id="agX-Pb-J3U"/>
+                                                    <constraint firstAttribute="width" secondItem="Jao-Cy-QJr" secondAttribute="height" multiplier="2:3" id="Rlr-5M-HIg"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="154" id="a8n-MC-myt"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="231" id="agX-Pb-J3U"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's write some filler text. Yay Movies!!" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="sRU-cD-VfQ" customClass="DetailDescLbl" customModule="Movies" customModuleProvider="target">
@@ -668,15 +758,15 @@
                                             </mask>
                                         </variation>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="7CZ-DY-oLz">
-                                        <rect key="frame" x="0.0" y="241" width="560" height="59"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="7CZ-DY-oLz">
+                                        <rect key="frame" x="0.0" y="238" width="560" height="60"/>
                                         <string key="text">Janey is new in town, and soon meets Lynne, who shares her passion for dancing in general, and "Dance TV" in particular. When a competition is announced to find a new Dance TV regular ...</string>
                                         <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="http://IMDB.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gg1-qy-n96">
-                                        <rect key="frame" x="0.0" y="310" width="560" height="61"/>
+                                        <rect key="frame" x="0.0" y="305" width="560" height="66"/>
                                         <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="13"/>
                                         <color key="textColor" red="0.99215686270000003" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -746,8 +836,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="startQuote" translatesAutoresizingMaskIntoConstraints="NO" id="ie6-DM-lPG">
-                                <rect key="frame" x="192" y="160" width="32" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="startQuote" translatesAutoresizingMaskIntoConstraints="NO" id="ie6-DM-lPG">
+                                <rect key="frame" x="188" y="162" width="32" height="30"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One Flew Over The Cuckoo's Nest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Jjs-Pd-Krl" customClass="DetailTitleLbl" customModule="Movies" customModuleProvider="target">
                                 <rect key="frame" x="20" y="97" width="560" height="50"/>
@@ -771,9 +861,11 @@
                             <constraint firstAttribute="trailingMargin" secondItem="0Pb-y7-Rlm" secondAttribute="trailing" constant="-20" id="HX0-G0-uob"/>
                             <constraint firstItem="ie6-DM-lPG" firstAttribute="leading" secondItem="sRU-cD-VfQ" secondAttribute="leading" id="IKS-B8-b3Y"/>
                             <constraint firstItem="OoC-42-KLU" firstAttribute="bottom" secondItem="sRU-cD-VfQ" secondAttribute="bottom" constant="-5" id="IPt-4g-Luh"/>
+                            <constraint firstItem="pDa-1F-h7e" firstAttribute="width" secondItem="Jjs-Pd-Krl" secondAttribute="width" id="LJm-kx-IOo"/>
                             <constraint firstItem="ie6-DM-lPG" firstAttribute="leading" secondItem="sRU-cD-VfQ" secondAttribute="leading" constant="5" id="Le3-44-ZPo"/>
                             <constraint firstItem="sFB-is-NJ2" firstAttribute="top" secondItem="Tbw-4N-fSt" secondAttribute="bottom" id="Phw-RE-IfR"/>
                             <constraint firstItem="Tbw-4N-fSt" firstAttribute="leading" secondItem="hbK-cO-dPp" secondAttribute="leadingMargin" constant="-20" id="Uhv-Qq-3Hv"/>
+                            <constraint firstItem="pDa-1F-h7e" firstAttribute="leading" secondItem="Jjs-Pd-Krl" secondAttribute="leading" id="Vmy-ZJ-xO0"/>
                             <constraint firstItem="ie6-DM-lPG" firstAttribute="leading" secondItem="sRU-cD-VfQ" secondAttribute="leading" id="WMC-9C-Jn3"/>
                             <constraint firstItem="pDa-1F-h7e" firstAttribute="top" secondItem="0Pb-y7-Rlm" secondAttribute="bottom" constant="20" id="YE9-Qc-qZA"/>
                             <constraint firstItem="OoC-42-KLU" firstAttribute="trailing" secondItem="sRU-cD-VfQ" secondAttribute="trailing" constant="-5" id="cpt-Pq-NaA"/>
@@ -792,6 +884,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="A0q-LM-jMq"/>
+                                <exclude reference="dDq-S2-Ifq"/>
                                 <exclude reference="7X1-LG-nRM"/>
                                 <exclude reference="YE9-Qc-qZA"/>
                                 <exclude reference="3VQ-gj-kwK"/>
@@ -819,10 +913,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="PoweredByTMDB_Blk_Logo_Bree" width="160" height="36"/>
         <image name="back-button" width="32" height="32"/>
         <image name="cars154" width="154" height="231"/>
         <image name="default-image" width="149" height="213"/>
         <image name="endQuote" width="33" height="30"/>
+        <image name="likeVideo" width="82" height="87"/>
         <image name="movies-logo" width="161" height="56"/>
         <image name="plus-button" width="32" height="32"/>
         <image name="startQuote" width="32" height="30"/>
